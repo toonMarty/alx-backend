@@ -38,8 +38,8 @@ class Server:
         Return:
             list: an appropriate page of a dataset
         """
-        assert isinstance(page, int) and page > 0
-        assert isinstance(page_size, int) and page_size > 0
+        assert isinstance(page, int) and isinstance(page_size, int)
+        assert page > 0 and page_size > 0
 
         # indexes is a tuple with start and end indexes
         indexes = index_range(page, page_size)
