@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+
+"""
+This module contains a class Server that
+contains a method get_page
+"""
+
 import csv
 import math
 from typing import List, Tuple
@@ -38,8 +44,8 @@ class Server:
         Return:
             list: an appropriate page of a dataset
         """
-        assert isinstance(page, int) and isinstance(page_size, int)
-        assert page > 0 and page_size > 0
+        assert page > 0 and isinstance(page, int)
+        assert isinstance(page_size, int) and page_size > 0
 
         # indexes is a tuple with start and end indexes
         indexes = index_range(page, page_size)
