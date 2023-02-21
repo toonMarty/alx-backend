@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""This module contains a class server
+and the method get_hyper_index
+"""
+
 import csv
 from math import ceil
 from typing import List, Dict
