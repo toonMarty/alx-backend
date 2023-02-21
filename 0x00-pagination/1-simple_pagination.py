@@ -46,4 +46,7 @@ class Server:
         start = indexes[0]
         end = indexes[1]
 
-        return self.dataset()[start: end]
+        try:
+            return self.dataset()[start: end]
+        except IndexError:
+            return []
