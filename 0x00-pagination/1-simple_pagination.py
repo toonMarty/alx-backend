@@ -44,7 +44,7 @@ class Server:
         Return:
             list: an appropriate page of a dataset
         """
-        assert page > 0 and isinstance(page, int)
+        assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
         # indexes is a tuple with start and end indexes
