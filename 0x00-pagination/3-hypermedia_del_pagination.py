@@ -66,4 +66,3 @@ class Server:
                 'page_size': len(page),
                 'data': page
                 }
-
