@@ -23,7 +23,6 @@ class BasicCache(BaseCaching, ABC):
         """
         if key is not None or item is not None:
             self.cache_data.update({key: item})
-        pass
 
     def get(self, key):
         """
@@ -34,6 +33,6 @@ class BasicCache(BaseCaching, ABC):
         Return
             :return: the value in self.cache_data linked to key
         """
-        if key is not None:
-            return self.cache_data.get(key)
-        return None
+        if key is None or key not in self.cache_data:
+            return None
+        return self.cache_data.get(key)
