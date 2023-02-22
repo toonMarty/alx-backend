@@ -8,3 +8,8 @@ This class has two methods:
 A class FIFOCache that inherits from BaseCaching and is a caching system
 This class's put method has an added functionality that implements the FIFO caching
 algorithm by discarding the first item on the cache.
+
+# 2. LIFO caching
+A class LIFOCache that inherits from BaseCaching and is a caching system
+This class's put method has an added functionality that implements the LIFO caching
+algorithm by discarding the first item on the cache.
