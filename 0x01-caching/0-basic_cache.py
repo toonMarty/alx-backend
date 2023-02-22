@@ -22,7 +22,7 @@ class BasicCache(BaseCaching, ABC):
             :return: none
         """
         if key is not None or item is not None:
-            self.cache_data.update({key: item})
+            self.cache_data[key] = item
 
     def get(self, key):
         """
