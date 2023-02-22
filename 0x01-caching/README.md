@@ -18,3 +18,8 @@ algorithm by discarding the first item on the cache.
 A class LRUCache that inherits from BaseCaching and is a caching system
 This class's put method has an added functionality that implements the LRU caching
 algorithm by discarding the Least Recently Used item on the cache
+
+# 4. MRU Caching
+A class MRUCache that inherits from BaseCaching and is a caching system
+This class's put method has an added functionality that implements the MRU caching
+algorithm by discarding the Most Recently Used item on the cache
