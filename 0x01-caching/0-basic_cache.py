@@ -3,10 +3,11 @@
 This module contains a class BasicCache that
 inherits from BaseCaching and is a caching system
 """
+from abc import ABC
 from base_caching import BaseCaching
 
 
-class BasicCache(BaseCaching):
+class BasicCache(BaseCaching, ABC):
     """
     The class definition of BasicCache
     """
@@ -22,6 +23,7 @@ class BasicCache(BaseCaching):
         """
         if key is not None or item is not None:
             self.cache_data.update({key: item})
+        pass
 
     def get(self, key):
         """
