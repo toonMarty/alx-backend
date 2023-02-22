@@ -15,11 +15,11 @@ class BasicCache(BaseCaching, ABC):
         """
         This method adds a key-value element
         to the cache_data dictionary
-        Args
-            :param key: the key of the item to add
-            :param item: the value of the item
+        Args:
+            key: the key of the item to add
+            item: the value of the item
         Return:
-            :return: none
+            none
         """
         if key is not None or item is not None:
             self.cache_data[key] = item
@@ -29,9 +29,9 @@ class BasicCache(BaseCaching, ABC):
         This method returns the value in self.cache_data
         linked to key
         Args:
-            :param key: the key to get
-        Return
-            :return: the value in self.cache_data linked to key
+            key: the key to get
+        Return:
+            the value in self.cache_data linked to key
         """
         if key is None or key not in self.cache_data:
             return None
