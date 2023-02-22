@@ -13,3 +13,8 @@ algorithm by discarding the first item on the cache.
 A class LIFOCache that inherits from BaseCaching and is a caching system
 This class's put method has an added functionality that implements the LIFO caching
 algorithm by discarding the first item on the cache.
+
+# 3. LRU Caching
+A class LRUCache that inherits from BaseCaching and is a caching system
+This class's put method has an added functionality that implements the LRU caching
+algorithm by discarding the Least Recently Used item on the cache
