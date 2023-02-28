@@ -1,2 +1,6 @@
 # 0. Basic Flask app
 setting up a basic Flask app in 0-app.py, creating a single / route and an index.html template
+
+# 1. Basic Babel setup
+Installing the Babel Flask extension
+Instantiating the Babel object in our app and storing it in a module level variable
