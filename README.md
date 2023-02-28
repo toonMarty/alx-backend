@@ -8,3 +8,6 @@ This directory contains a project on caching algorithms implemented using the py
 * LRU caching
 * MRU caching
 * LFU caching
+
+# 0x02-i18n
+This directory contains a project that uses the Flask web development framework and internationalization using I18n
