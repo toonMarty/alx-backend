@@ -13,4 +13,4 @@ def index():
     """
     This function returns Hello World as a header
     """
-    return '<h1>Hello World</h1>'
+    return '<h1>Hello world</h1>'
