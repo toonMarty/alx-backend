@@ -19,5 +19,5 @@ class Config(object):
     our app
     """
     LANGUAGES = ["en", "fr"]
-    app.config[babel.default_locale] = "en"
-    app.config[babel.default_timezone] = "UTC"
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
