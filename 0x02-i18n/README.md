@@ -7,3 +7,6 @@ Instantiating the Babel object in our app and storing it in a module level varia
 
 # 2. Get locale from request
 A get_locale function with the babel.localeselector decorator.
+
+# 3. Parametrize templates
+Using the _ or gettext function to parametrize your templates using the message IDs home_title and home_header.
