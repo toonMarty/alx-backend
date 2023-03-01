@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 This module contains:
-    - the gettext function to parameterize templates
-    - the message IDs home_title and home_header in
-      3-index.html file
+    - a get_locale function with the localeselector
+      decorator
+    - request.accept_languages to determine the best match
+      without supported languages
 """
 from flask_babel import Babel, gettext
 from flask import Flask, render_template, request
