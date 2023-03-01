@@ -2,7 +2,8 @@
 """
 This module contains:
     - the gettext function to parameterize templates
-
+    - the message IDs home_title and home_header in
+      3-index.html file
 """
 from flask_babel import Babel, gettext
 from flask import Flask, render_template, request
@@ -28,7 +29,8 @@ app.config.from_object(Config)
 @babel.localeselector
 def get_locale():
     """
-    Determines the best match with supported languages
+    This function determines the best match with
+    supported languages
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
@@ -36,10 +38,7 @@ def get_locale():
 @app.route('/')
 def index():
     """
-    This method renders the 3-index.html template
+    This is a view function that renders the 3-index.html
+    template
     """
     return render_template('3-index.html')
-
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
