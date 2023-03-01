@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""
+This module contains:
+    - a get_locale function with the localeselector
+      decorator
+    - request.accept_languages to determine the best match
+      without supported languages
+    - a way to force a particular locale by passing the
+      locale=fr parameter to your app’s URLs.
+"""
+from flask_babel import Babel
+from flask import Flask, render_template, request
+
+
+app = Flask(__name__)
+babel = Babel(app)
+
+
+class Config(object):
+    """
+    This class configures available languages in
+    our app
+    """
+    LANGUAGES = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
+
+
+app.config.from_object(Config)
+
+
+@babel.localeselector
+def get_locale():
+    """
+    Determines the best match with supported languages
+    """
+    locale = request.args.get("locale")
+
+    if locale in app.config['LANGUAGES']:
+        return locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
+@app.route('/')
+def index():
+    """
+    This method renders the 4-index.html template
+    """
+    return render_template('4-index.html')
