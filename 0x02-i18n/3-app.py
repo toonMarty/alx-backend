@@ -30,8 +30,7 @@ app.config.from_object(Config)
 @babel.localeselector
 def get_locale():
     """
-    This function determines the best match with
-    supported languages
+    Determines the best match with supported languages
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
@@ -39,7 +38,7 @@ def get_locale():
 @app.route('/')
 def index():
     """
-    This is a view function that renders the 3-index.html
-    template
+    This method renders the 3-index.html template
     """
     return render_template('3-index.html')
+
