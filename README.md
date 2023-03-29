@@ -11,3 +11,6 @@ This directory contains a project on caching algorithms implemented using the py
 
 # 0x02-i18n
 This directory contains a project that uses the Flask web development framework and internationalization using I18n
+
+# 0x03-queuing_system_in_js
+This directory contains a project that uses Redis and Nodejs.
